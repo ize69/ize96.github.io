@@ -1,0 +1,22 @@
+/*creates "about me" style*/
+
+abut_me {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+abut_me_text{
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 800px;
+}
+
+
+ 
