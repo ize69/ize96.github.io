@@ -1,68 +1,29 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #aaa0a0;/*will be #333 in final*/
-  }
-  
-  h1, h2 {
-    text-align: center;
-  }
-  
-  ul {
-    /*makes the styleing to alline the navigation rows of buttons*/
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav ul li {
-    margin: 0 1em;
-    border: .2rem solid #fff;
-    padding: 0.5em;
-    border-radius: 5rem;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Main Content Styles */
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  
-  section {
-    margin-bottom: 2em;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-  
+/*creates "about me" style for the about_me section*/
+#about_me_div {
+  margin: 3rem 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+#bio_paragraph {
+  font-size: 1.125em;
+  line-height: 1.5;
+}
+
+#bio_paragraph p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.25em;
+}
+
+#bio_paragraph ul {
+  list-style: disc;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.25em;
+}
+
+#bio_paragraph ul li {
+  margin-left: 1.25em;
+}

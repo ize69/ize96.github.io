@@ -26,20 +26,26 @@ function parse_git_fields(responseText) {
 }
 
 function display_bio_info(aboutMeInfo) {
+  // All the elements get styled as if they are in a table.
+  
   const aboutMeSection = document.getElementById('about_me');
 
-  const nameHeading = document.createElement('name_heading');
+  const nameHeading = document.createElement('h3');
   nameHeading.textContent = `${aboutMeInfo.name_first} ${aboutMeInfo.name_last}`;
+  nameHeading.classList.add('name-heading');
   aboutMeSection.appendChild(nameHeading);
   
-  const educationParagraph = document.createElement('education_paragraph');
+  const educationParagraph = document.createElement('p');
   educationParagraph.textContent = `education: ${aboutMeInfo.education}`;
+  educationParagraph.classList.add('education-paragraph');
   aboutMeSection.appendChild(educationParagraph);
   
-  const bioParagraph = document.createElement('bio_paragraph');
+  const bioParagraph = document.createElement('p');;
   bioParagraph.textContent = aboutMeInfo.bio;
-  aboutMeSection.appendChild(bioParagraph);
+  bioParagraph.classList.add('bio-paragraph');
+  aboutMeSection.appendChild(bioParagraph);  
 }
+
 
 function get_name(lastFirst) {
   const xhr = new XMLHttpRequest();
