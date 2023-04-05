@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #aaa0a0;/*will be #333 in final*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
   h1, h2 {
@@ -50,7 +53,8 @@ body {
   /* Main Content Styles */
   main {
     max-width: 84%;
-    margin: 0 8%;
+    margin-left: 8%;
+    margin-right: 8%;
     padding: 1em;
   }
   
@@ -64,5 +68,6 @@ body {
     color: #fff;
     padding: 1em;
     text-align: center;
+    margin-top: auto;
   }
   
