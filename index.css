@@ -1,22 +1,32 @@
-/*creates "about me" style*/
-
-abut_me {
+/*creates "about me" style for the about_me section*/
+/*the styling for the about me div*/
+#about_me_div {
+  margin: 50px 0;
   background-color: #333;
   color: #fff;
   padding: 1em;
 }
 
-abut_me_text{
-    text-rendering: optimizeLegibility;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 800px;
+#bio_paragraph {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
+#bio_paragraph p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#bio_paragraph ul {
+  list-style: disc;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#bio_paragraph ul li {
+  margin-left: 20px;
+}
 
  
