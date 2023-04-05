@@ -1,29 +1,68 @@
 /*creates "about me" style for the about_me section*/
 #about_me_div {
-  margin: 3rem 0;
+  margin: 5em 0;
   background-color: #333;
   color: #fff;
   padding: 1em;
 }
 
 #bio_paragraph {
-  font-size: 1.125em;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 #bio_paragraph p {
   margin: 0;
   padding: 0;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
 }
 
 #bio_paragraph ul {
   list-style: disc;
   margin: 0;
   padding: 0;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
 }
 
 #bio_paragraph ul li {
-  margin-left: 1.25em;
+  margin-left: 20px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.name-education-container {
+  flex-basis: calc(50% - 1em);
+  margin-right: 1em;
+  min-width: 20ch;
+}
+
+.name-heading, .education-paragraph {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-me-container {
+    flex-wrap: nowrap;
+  }
+
+  .name-education-container {
+    flex-basis: 100%;
+    margin-right: 1em;
+    margin-bottom: 10px;
+    min-width: 20ch;
+  }
+
+  .name-heading {
+    width: 100%;
+  }
+
+  .education-paragraph {
+    width: 100%;
+  }
 }

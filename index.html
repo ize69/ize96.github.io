@@ -27,12 +27,19 @@
   </header>
   <main>
     <div id="about_me_div">
-    <section id="about_me">
-      <h2>About Me</h2>
-        <script>
-          document.write(get_bio());
-        </script>
-    </section>
+      <section id="about_me">
+        <h2>About Me</h2>
+        <div class="about-me-container">
+          <div class="name-education-container">
+            <h3 id="name_heading"></h3>
+            <p id="education_paragraph"></p>
+          </div>
+          <p id="bio_paragraph"></p>
+          <script>
+            document.write(get_bio());
+          </script>
+        </div>
+      </section>
     </div>
   </main>
 
