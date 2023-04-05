@@ -2,7 +2,7 @@
 const file_path = "info/about.txt";
 
 // Create a function to get the about me information from the file
-function getAboutMeInfo() {
+function get_bio() {
   // Create a new XMLHttpRequest object
   const xhr = new XMLHttpRequest();
 
