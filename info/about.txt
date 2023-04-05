@@ -1,4 +1,4 @@
-name_first: "John"
-name_last: "Smith"
+name_first: "Isaac"
+name_last: "Worsencroft"
 education: "in progress"
 bio: "From a young age, I have had a passion for creating both physical and digital projects. Whether it's building a treehouse in the backyard or designing a website from scratch, the process of bringing my ideas to life has always been a thrilling experience. This love for creating has stuck with me throughout my life, and I have continued to pursue projects that challenge and inspire me. Whether it's through woodworking, graphic design, or programming, I take pride in the work I do and find joy in seeing my creations out in the world. I am grateful for the opportunity to continue exploring my creative side and look forward to what the future holds."
