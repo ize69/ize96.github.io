@@ -20,8 +20,9 @@ function getAboutMeInfo() {
         // Split each line into an array containing the key and value
         const [key, value] = line.split(': ');
         console.debug(`Key: ${key}, Value: ${value}`)
-        //remove the quotes from the start and end of the strings
-        aboutMeInfo[key] = value.replace(/^"(.*)"$/, '$1');
+        //remove the quotes from the start and end of the strings only keeping all other instances of quotes
+        value = value.substring(1, value.length - 1);
+        aboutMeInfo[key] = value;
       });
 
       // Select the about_me section in the HTML
