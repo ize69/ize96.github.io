@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
+  <title></title>
   <!--imports all style sheets and scripts-->
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="index.css">
-  <link rel="script" type="text/javascript" href="about.js">
-
+  <script src="info/about.js"></script>
 </head>
 <body>
   <header>
-    <h1>My Portfolio</h1>
+    <!--gets the name of the portfolio owner with get_name() in about.js-->
+    <h1>
+      <script>
+        document.write(get_name());
+      </script>
+    </h1>
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
@@ -21,11 +25,12 @@
   </header>
   <main>
     <section id="about_me">
-      <abut_me>About Me</abut_me>
-      <about_me_text>
-      <script src="info/about.js"></script>
-
-      </about_me_text>
+      <h2>About Me</h2>
+      <div id="about_me_text">
+        <script>
+          document.write(get_bio());
+        </script>
+      </div>
     </section>
   </main>
 
