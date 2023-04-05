@@ -18,6 +18,8 @@ xhr.onload = function() {
       // Split each line into an array containing the key and value
       const [key, value] = line.split(': ');
       console.debug(`Key: ${key}, Value: ${value}`)
+      //remove the quotes from the start and end of the strings
+      aboutMeInfo[key] = value.replace(/^"(.*)"$/, '$1');
       // Add the key-value pair to the aboutMeInfo object
       aboutMeInfo[key] = value;
     });
