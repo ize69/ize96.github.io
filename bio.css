@@ -36,7 +36,6 @@
 
 .name-education-container {
   flex-basis: calc(50% - 1em);
-  margin-right: 1em;
   min-width: 20ch;
 }
 
@@ -65,4 +64,6 @@
   .education-paragraph {
     width: 100%;
   }
+
+  
 }
