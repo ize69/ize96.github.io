@@ -1,63 +1,57 @@
-//this file contains the project class and its methods
-
 // Project class
-class Project {
+export default class Project {
     constructor(name, description, images, tasks) {
         this.name = name;
         this.description = description;
         this.images = images;
         this.tasks = tasks;
     }
-}
 
-// Project methods
-Project.prototype.addTask = function (task) {
-    this.tasks.push(task);
-}
+    addTask(task) {
+        this.tasks.push(task);
+    }
 
-Project.prototype.removeTask = function (task) {
-    this.tasks.splice(this.tasks.indexOf(task), 1);
-}
+    removeTask(task) {
+        this.tasks.splice(this.tasks.indexOf(task), 1);
+    }
 
-Project.prototype.addImage = function (image) {
-    this.images.push(image);
-}
+    addImage(image) {
+        this.images.push(image);
+    }
 
-Project.prototype.removeImage = function (image) {
-    this.images.splice(this.images.indexOf(image), 1);
-}
+    removeImage(image) {
+        this.images.splice(this.images.indexOf(image), 1);
+    }
 
-Project.prototype.getName = function () {
-return this.name;
-}
-    
-Project.prototype.getDescription = function () {
-return this.description;
-}
+    getName() {
+        return this.name;
+    }
 
-Project.prototype.setName = function (name) {
-this.name = name;
-}
+    getDescription() {
+        return this.description;
+    }
 
-Project.prototype.setDescription = function (description) {
-this.description = description;
-}
+    setName(name) {
+        this.name = name;
+    }
 
-Project.prototype.getImages = function () {
-return this.images;
-}
+    setDescription(description) {
+        this.description = description;
+    }
 
-Project.prototype.getTasks = function () {
-return this.tasks;
-}
+    getImages() {
+        return this.images;
+    }
 
-Project.prototype.setImages = function (images) {
-this.images = images;
-}
+    getTasks() {
+        return this.tasks;
+    }
 
-Project.prototype.setTasks = function (tasks) {
-this.tasks = tasks;
-}
+    setImages(images) {
+        this.images = images;
+    }
 
-// Export the Project class
-module.exports = Project;
+    setTasks(tasks) {
+        this.tasks = tasks;
+    }
+}

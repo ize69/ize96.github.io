@@ -1,34 +1,32 @@
-//this js file is responcable for making all the projects and adding them to the project array
-const assert = require('assert');
-const fs = require('fs');
+import Project from '../projects/project_class.js';
 
-function getFileStructure(dir) {
-  let files = fs.readdirSync(dir);
-  let fileStructure = {};
-  for (let file of files) {
-    let path = `${dir}/${file}`;
-    let stats = fs.statSync(path);
-    if (stats.isDirectory()) {
-      fileStructure[file] = getFileStructure(path);
-    } else {
-      fileStructure[file] = stats.size;
-    }
-  }
-  return fileStructure;
-}
-
-describe('getFileStructure', function() {
-  it('should return the correct file structure', function() {
-    let fileStructure = getFileStructure('./test-folder');
-    assert.deepEqual(fileStructure, {
-      'file.txt': 5,
-      'sub-folder': {
-        'file2.txt': 7,
-        'sub-sub-folder': {
-          'file3.txt': 9
+$(document).ready(function() {
+    $.ajax({
+        url: './tree.php',
+        method: 'GET',
+        data: {
+            dir: '/var/www/html'
+        },
+        success: function(response) {
+            var projectList = document.getElementById("projectList");
+            var projectListItem = document.createElement("li");
+            var projectListItemLink = document.createElement("a");
+            var projectListItemLinkText = document.createTextNode("test");
+            projectListItemLink.appendChild(projectListItemLinkText);
+            projectListItem.appendChild(projectListItemLink);
+            projectList.appendChild(projectListItem);
+            var projectListItems = projectList.querySelectorAll("li");
+            projectListItems.forEach(function(item) {
+                item.addEventListener("click", function(event) {
+                    console.log(event.target.innerText);
+                });
+            });
+        },
+        error: function(xhr, status, error) {
+            console.log('Error:', error);
         }
-      }
     });
-  });
-});
 
+    const test = new Project("test", "test", ["test"], ["test"]);
+    var projects = [test];
+});
