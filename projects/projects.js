@@ -1,24 +1,37 @@
 import Project from '../projects/project_class.js';
+import addProjectToDOM from '../projects/dom.js';
 
 $(document).ready(function() {
     $.ajax({
         url: './tree.php',
         method: 'GET',
         data: {
-            dir: '/var/www/html'
+            dir: '../projects/uploads'
         },
         success: function(response) {
-            var projectList = document.getElementById("projectList");
-            var projectListItem = document.createElement("li");
-            var projectListItemLink = document.createElement("a");
-            var projectListItemLinkText = document.createTextNode("test");
-            projectListItemLink.appendChild(projectListItemLinkText);
-            projectListItem.appendChild(projectListItemLink);
-            projectList.appendChild(projectListItem);
-            var projectListItems = projectList.querySelectorAll("li");
-            projectListItems.forEach(function(item) {
-                item.addEventListener("click", function(event) {
-                    console.log(event.target.innerText);
+            const projects = [];
+            const folders = response.trim().split('\n');
+            folders.forEach(function(folder) {
+                const name = folder.trim().split('/').pop();
+                const images = [];
+                $.ajax({
+                    url: `./tree.php?dir=${folder}`,
+                    method: 'GET',
+                    success: function(response) {
+                        console.debug(` ${folder}`);
+                        const files = response.trim().split('\n');
+                        files.forEach(function(file) {
+                            if (/\.(gif|jpe?g|png)$/i.test(file)) {
+                                images.push(file.trim());
+                            }
+                        });
+                        const project = new Project(name, "", images, [], "");
+                        projects.push(project);
+                        addProjectToDOM(project);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(`Error fetching images for ${name}:`, error);
+                    }
                 });
             });
         },
@@ -26,7 +39,4 @@ $(document).ready(function() {
             console.log('Error:', error);
         }
     });
-
-    const test = new Project("test", "test", ["test"], ["test"]);
-    var projects = [test];
 });

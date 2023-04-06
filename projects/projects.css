@@ -1,0 +1,42 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 1rem;
+  }
+  
+  ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    color: #666;
+  }
+
+  #projectList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #projectList li {
+    margin-bottom: 10px;
+  }
+  
+  #projectList li a {
+    display: block;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  #projectList li a:hover {
+    background-color: #ddd;
+  }

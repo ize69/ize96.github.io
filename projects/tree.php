@@ -11,20 +11,13 @@ function listFiles($dir) {
         $path = $dir . '/' . $file;
         if (is_dir($path)) {
             // If file is a directory, call the function recursively
-            echo '<li>' . $file . '</li>';
-            echo '<ul>';
+            echo $path . "\n";
             listFiles($path);
-            echo '</ul>';
-        } else {
-            // If file is a regular file, print the filename
-            echo '<li>' . $file . '</li>';
         }
     }
 }
 
 // Example usage: list all files in the directory '/var/www/html'
-echo '<ul>';
-listFiles('/var/www/html');
-echo '</ul>';
+listFiles('../projects/uploads');
 
 ?>
